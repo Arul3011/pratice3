@@ -6,77 +6,163 @@
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
   
-  <title>Frontend Mentor | Blog preview card</title>
+  <title>Frontend Mentor | FAQ accordion</title>
 
   <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
   <style>
-  body{
-    background-color:hsl(47, 88%, 63%) ;
-    display: flex;
-    justify-content: center;
-   }
-   .cointainer{
-    background-color: hsl(0, 0%, 100%);
-    width: 340px;
-    height: auto;
-    border-radius: 15px;
-    margin: 40px 0px;
-   }
-   svg{
-    margin: 20px;
-    border-radius: 20px;
-   }
-   .fott{
-    display: flex;
-    margin-left: 25px;
-    margin-bottom: 20px ;
-   }
-   img{
-    height: 50px;
-   }
-   p{
-    margin-left: 25px;
-    margin-right: 25px;
-    font-size: 16px;
-   }
-    .p{
-    background-color: hsl(47, 88%, 63%);
-    width: fit-content;
-    padding: 5px 10px;
-    border-radius: 7px;
-    font-size: 16px;
-   }
-   .cointainer:hover{
-    box-shadow: 10px 10px;
-    cursor: pointer;
-   }
-   @media only screen and (max-width: 550px){
-    svg{
-      width: auto;
+    *{
+      font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     }
+    body{
+    
+      user-select: auto;
+      display: flex;
+      justify-content: center;
+      background-color: hsl(275, 100%, 97%);
+      background-image: url(background-pattern-desktop.svg);
+      background-size: auto ;
+      background-repeat: no-repeat;
+      color: hsl(292, 42%, 14%);
+    }
+
     .cointainer{
-      margin: 40px 20px;
+    
+      background-color: white;
+      width: 500px;
+      border-radius: 8px;
+      margin-top: 100px;
+      box-shadow: gray 0px 5px 10px ;
+      overflow: auto;
+      max-height: fit-content;
+      min-height: fit-content;
+
+
+
     }
+   
+    .hide{
+      color: hsl(292, 16%, 49%);
+    }
+  
+  
+  .v{
+     
+     padding: 10px 20px;
+     display: flex;
+     justify-content: space-between;
+    }
+    .v::after{
+      content: url(icon-plus.svg);
+    
+    }
+    .v:hover{
+      cursor: pointer;
+    }
+    .hide{
+      padding: 20px;
+      display: none;
+    }
+    
+    h1,p{
+      padding: 0px 20px;
+    }
+    .xxx{
+      padding-left: 20px;
+      display: flex;
+      position:relative;
+    }
+    .v:hover{
+      color: #AD28EB;
+    }
+    .v img{
+      src: url("assets\images\icon-plus.svg");
+    }
+    b{
+      width: auto ;
+    }
+    span{
+    background-image: url("icon-plus.svg");
+    height: 30px;
+    width: 30px;
    }
+   .d::after{
+    content: url(icon-minus.svg);
+   }
+   
+
+   
+  @media (max-width:425px){
+    .cointainer{
+      margin: 150px 20px;
+    }
+  }
+   
+    
   </style>
 </head>
-<body>
-<div class="cointainer">
-  <svg xmlns="http://www.w3.org/2000/svg" width="300" height="201" fill="none" viewBox="0 0 336 201"><g clip-path="url(#a)"><path fill="#F4D04E" d="M0 .5h336v200H0z"/><rect width="139" height="95" x="87.996" y="77.729" fill="#fff" rx="47.5" transform="rotate(-45 87.996 77.729)"/><rect width="139" height="95" x="54.055" y="77.729" fill="#111" rx="47.5" transform="rotate(-45 54.055 77.729)"/><path fill="#111" d="M234.864 209.036 451.4-7.5l67.175 67.175-216.536 216.536z"/><rect width="139" height="95" x="20.114" y="77.729" fill="#fff" rx="47.5" transform="rotate(-45 20.114 77.729)"/><rect width="204.19" height="270.554" fill="#111" rx="102.095" transform="scale(-1 1) rotate(45 -103.887 14.564)"/><path stroke="#fff" stroke-width="3" d="m6.69-357.5 135.583 135.727c12.481 12.494 12.481 32.737 0 45.231L-45.544 11.475c-12.481 12.494-12.481 32.737 0 45.23L107.088 209.5"/><path stroke="#111" stroke-width="3" d="M69.965 71.719v23.334h23.334M136.079 52.273V28.94h-23.334M102.845 38.838v46.67M210.364-37.5l60.873 60.873c12.497 12.496 12.497 32.758 0 45.254l-77.745 77.746c-12.497 12.496-12.497 32.758 0 45.254l69.872 69.873"/><path stroke="#111" stroke-width="3" d="m253.339 149.574-12.144 12.145 14.256 14.257v12.672h12.673l13.729 13.729 12.145-12.145M278.685 124.228l-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145M304.031 98.883l-12.145 12.144 14.257 14.257v12.673h12.673l13.729 13.729 12.144-12.145M329.376 73.537l-12.145 12.145 14.257 14.257v12.672h12.673l13.729 13.729 12.145-12.144"/><path stroke="#fff" stroke-width="5" d="m354.722 48.191-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145"/><mask id="b" width="285" height="285" x="234" y="-8" maskUnits="userSpaceOnUse" style="mask-type:alpha"><path fill="#111" d="M234.864 209.036 451.4-7.5l67.175 67.175-216.536 216.536z"/></mask><g stroke="#fff" mask="url(#b)"><path stroke-width="3" d="m253.339 149.574-12.144 12.145 14.256 14.257v12.672h12.673l13.729 13.729 12.145-12.145M278.685 124.228l-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145M304.031 98.883l-12.145 12.144 14.257 14.257v12.673h12.673l13.729 13.729 12.144-12.145M329.376 73.537l-12.145 12.145 14.257 14.257v12.672h12.673l13.729 13.729 12.145-12.145"/><path stroke-width="5" d="m354.722 48.191-12.145 12.145 14.257 14.257v12.673h12.673l13.729 13.729 12.145-12.145"/></g></g><defs><clipPath id="a"><path fill="#fff" d="M0 .5h336v200H0z"/></clipPath></defs></svg>
-  <p class="p"><b>Learning</b></p>
+<body >
+  
+    <div class="cointainer">
+    
+      <div class="xxx">
+       <img src="icon-star.svg" alt=""> <h1>FAQs</h1>
+      </div>
+  
+ <p class="v"> 
+    <b>What is Frontend Mentor, and how will it help me?</b>
+    
+</p>
+<p  class="hide">Frontend Mentor offers realistic coding challenges to help developers improve their 
+  frontend coding skills with projects in HTML, CSS, and JavaScript. It's suitable for 
+  all levels and ideal for portfolio building.</p>
 
-  <p>Published 21 Dec 2023</p>
+   <p class="v"><b>Is Frontend Mentor free?</b>  </p>
 
-  <p><b><big>HTML & CSS foundations</big></b></p>
+ <p  class="hide"> Yes, Frontend Mentor offers both free and premium coding challenges, with the free 
+  option providing access to a range of projects suitable for all skill levels.</p>
 
-<p>  These languages are the backbone of every website, defining structure, content, and presentation.</p>
+  <p class="v"><b>Can I use Frontend Mentor projects in my portfolio?</b>
+   
+  </p>
 
-  <div class="fott">
-    <img src="image-avatar.webp" alt=""><p><big><b>Greg Hooper</b></big></p>
+  <p  class="hide">Yes, you can use projects completed on Frontend Mentor in your portfolio. It's an excellent
+  way to showcase your skills to potential employers!</p>
+
+ <p class="v"><b> How can I get help if I'm stuck on a Frontend Mentor challenge?</b>
+  
+  </p> 
+  
+ <p  class="hide" > The best place to get help is inside Frontend Mentor's Discord community. There's a help 
+  channel where you can ask questions and seek support from other community members.</p> 
+
+  
+  
+    
   </div>
-</div>
-  
-  
  
+ <script>
+  const a=document.getElementsByClassName("v");
+
+  
+  
+for (var i = 0; i < a.length; i++) {
+ 
+    a[i].addEventListener("click", function(e) {
+      this.classList.toggle('d');
+      
+      
+      var panel = this.nextElementSibling;
+      if (panel.style.display === "block") {
+        panel.style.display = "none";
+      
+
+      } else {
+        panel.style.display = "block";
+
+        }
+  });
+}    
+
+ </script>
 </body>
-</html>
+</html> 
